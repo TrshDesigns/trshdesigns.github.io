@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Fragment 001: Signal Noise"
-date: 2025-02-20 12:00:00 -0300
+title:  "Fragment 001: Signal Noise"
+date:   2025-02-20 01:46:55 -0300
 categories: x tech
 ---
 

@@ -1,0 +1,319 @@
+/* MSDOS-style Infosec Schizoposting Theme */
+
+body {
+    font-family: "Terminal", monospace;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    max-width: 80vw;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    overflow-y: auto
+}
+
+a {
+    color: #AAAAAA;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    background: #555;
+    text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+    border-bottom: 1px solid #888;
+    padding-bottom: 5px;
+}
+
+blockquote {
+    border-left: 2px solid #888;
+    padding-left: 10px;
+    color: #AAA;
+    font-style: italic;
+}
+
+code,
+pre {
+    background: black;
+    color: white;
+    border: 1px solid #777;
+    padding: 5px;
+    display: block;
+    font-family: "Courier New", monospace;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    border: 1px solid #777;
+    padding: 5px;
+}
+
+thead {
+    background: #777;
+    color: black;
+}
+
+.site-header {
+    border-bottom: 2px solid #777;
+    padding: 10px;
+    text-align: center;
+    background: black;
+}
+
+.site-footer {
+    border-top: 2px solid #777;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    color: #AAA;
+}
+
+.page-content {
+    flex: 1;
+}
+
+.wrapper {
+    max-width: 800px;
+    margin: auto;
+    padding: 10px;
+}
+
+ul,
+ol {
+    padding-left: 20px;
+}
+
+li::before {
+    content: "█ ";
+    color: #777;
+}
+
+button {
+    background: black;
+    color: white;
+    border: 1px solid #777;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: "Courier New", monospace;
+}
+
+button:hover {
+    background: #777;
+    color: black;
+}
+
+/* Small aesthetic touch */
+::selection {
+    background: #777;
+    color: black;
+}
+
+/* Cursor flickering effect */
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.cursor {
+    display: inline-block;
+    width: 10px;
+    height: 16px;
+    background: white;
+    animation: blink 1s infinite;
+}
+
+/* Matching modified navbar CSS for MSDOS-style theme */
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    padding: 10px 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Initial navbar styles */
+.navbar {
+    position: relative;
+}
+
+.navbar-toggle {
+    display: none;
+    /* Hide toggle by default */
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Show the navbar toggle on smaller screens */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        /* Hide links initially on mobile */
+        flex-direction: column;
+        width: 100%;
+        background-color: black;
+        /* Add background color to the navbar */
+    }
+
+    .navbar-toggle {
+        display: flex;
+        /* Show the hamburger icon */
+    }
+
+    .navbar-links.active {
+        display: flex;
+        /* Show links when 'active' class is added */
+    }
+}
+
+
+.navbar li {
+    font-family: "Courier New", monospace;
+    letter-spacing: 0.1em;
+}
+
+.navbar a {
+    color: #AAAAAA;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+}
+
+.navbar a:hover {
+    color: white;
+    background-color: #555;
+    border: 1px solid #777;
+    text-decoration: underline;
+}
+
+/* Optional: Mobile-friendly adjustments */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Custom Scrollbar Styles */
+
+/* Scrollbar Container */
+::-webkit-scrollbar {
+    width: 8px;
+    /* Thin scrollbar */
+    height: 8px;
+    /* Thin horizontal scrollbar */
+}
+
+/* Scrollbar Track (background) */
+::-webkit-scrollbar-track {
+    background: black;
+    /* Matches background */
+    border-radius: 10px;
+    /* Rounded corners for smoothness */
+}
+
+/* Scrollbar Thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+    background-color: #555;
+    /* A subtle grey color */
+    border-radius: 10px;
+    /* Rounded corners for smoothness */
+    border: 2px solid #222;
+    /* A slight border to make it more defined */
+}
+
+/* Scrollbar Thumb on Hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #888;
+    /* Lighter grey on hover */
+    border: 2px solid #444;
+    /* Slightly darker border for contrast */
+}
+
+/* Scrollbar Corner (bottom-right corner when both vertical and horizontal scrollbars are visible) */
+::-webkit-scrollbar-corner {
+    background-color: black;
+    /* Keeps the corner matching the background */
+}/* Custom Scrollbar Styles */
+
+/* Scrollbar Container */
+::-webkit-scrollbar {
+    width: 8px; /* Thin scrollbar */
+    height: 8px; /* Thin horizontal scrollbar */
+}
+
+/* Scrollbar Track (background) */
+::-webkit-scrollbar-track {
+    background: black; /* Matches background */
+    border-radius: 10px; /* Rounded corners for smoothness */
+}
+
+/* Scrollbar Thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+    background-color: #555; /* A subtle grey color */
+    border-radius: 10px; /* Rounded corners for smoothness */
+    border: 2px solid #222; /* A slight border to make it more defined */
+}
+
+/* Scrollbar Thumb on Hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #888; /* Lighter grey on hover */
+    border: 2px solid #444; /* Slightly darker border for contrast */
+}
+
+/* Scrollbar Corner (bottom-right corner when both vertical and horizontal scrollbars are visible) */
+::-webkit-scrollbar-corner {
+    background-color: black; /* Keeps the corner matching the background */
+}

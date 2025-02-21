@@ -4,22 +4,87 @@ layout: page
 ---
 
 <style type="text/css" media="screen">
+  /* Overall body and layout */
+  body {
+    font-family: "Terminal", monospace;
+    background-color: black;
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+  }
+
   .container {
     margin: 10px auto;
     max-width: 600px;
-    text-align: center;
   }
+
   h1 {
     margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
+    font-size: 5em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ff3333; /* Red color for error */
+  }
+
+  p {
+    font-size: 1.2em;
+    color: #aaaaaa;
+  }
+
+  /* Button style - Terminal like */
+  .home-button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    border: 1px solid #777;
+    background-color: black;
+    color: white;
+    font-family: "Courier New", monospace;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+
+  .home-button:hover {
+    background-color: #333;
+    border-color: #aaa;
+    color: #fff;
+  }
+
+  .home-button:focus {
+    outline: none;
+  }
+
+  /* Cursor flicker effect */
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+
+  .cursor {
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    background: white;
+    animation: blink 1s infinite;
+    margin-left: 5px;
   }
 </style>
 
 <div class="container">
   <h1>404</h1>
+  <p><strong>Page Not Found :(</strong></p>
+  <p>The requested page could not be found. It might have been removed or relocated.</p>
+  <p>Maybe you’re lost in the void of the web? Use the button below to return home.</p>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+  <!-- Button linking to the homepage -->
+  <a href="{{ '/' | absolute_url }}" class="home-button">
+    Return Home <span class="cursor"></span>
+  </a>
 </div>
