@@ -1,7 +1,7 @@
 /* MSDOS-style Infosec Schizoposting Theme */
 
 body {
-    font-family: "Terminal", monospace;
+    font-family: "Courier New", monospace;
     background-color: black;
     color: white;
     text-transform: uppercase;
@@ -16,7 +16,7 @@ body {
 html {
     display: flex;
     justify-content: center;
-    overflow-y: auto
+    overflow-y: auto;
 }
 
 a {
@@ -30,12 +30,7 @@ a:hover {
     text-decoration: underline;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     border-bottom: 1px solid #888;
     padding-bottom: 5px;
@@ -48,8 +43,7 @@ blockquote {
     font-style: italic;
 }
 
-code,
-pre {
+code, pre {
     background: black;
     color: white;
     border: 1px solid #777;
@@ -63,8 +57,7 @@ table {
     border-collapse: collapse;
 }
 
-td,
-th {
+td, th {
     border: 1px solid #777;
     padding: 5px;
 }
@@ -99,8 +92,7 @@ thead {
     padding: 10px;
 }
 
-ul,
-ol {
+ul, ol {
     padding-left: 20px;
 }
 
@@ -123,13 +115,13 @@ button:hover {
     color: black;
 }
 
-/* Small aesthetic touch */
+/* Small Aesthetic Touch */
 ::selection {
     background: #777;
     color: black;
 }
 
-/* Cursor flickering effect */
+/* Cursor Flickering Effect */
 @keyframes blink {
     50% {
         opacity: 0;
@@ -144,9 +136,7 @@ button:hover {
     animation: blink 1s infinite;
 }
 
-/* Matching modified navbar CSS for MSDOS-style theme */
-
-/* Navbar styling */
+/* Navbar Styling */
 .navbar {
     display: flex;
     justify-content: center;
@@ -159,63 +149,6 @@ button:hover {
     display: flex;
     gap: 20px;
 }
-
-/* Initial navbar styles */
-.navbar {
-    position: relative;
-}
-
-.navbar-toggle {
-    display: none;
-    /* Hide toggle by default */
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 30px;
-    height: 25px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.bar {
-    width: 100%;
-    height: 4px;
-    background-color: #fff;
-    border-radius: 5px;
-}
-
-.navbar-links {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* Show the navbar toggle on smaller screens */
-@media (max-width: 768px) {
-    .navbar-links {
-        display: none;
-        /* Hide links initially on mobile */
-        flex-direction: column;
-        width: 100%;
-        background-color: black;
-        /* Add background color to the navbar */
-    }
-
-    .navbar-toggle {
-        display: flex;
-        /* Show the hamburger icon */
-    }
-
-    .navbar-links.active {
-        display: flex;
-        /* Show links when 'active' class is added */
-    }
-}
-
 
 .navbar li {
     font-family: "Courier New", monospace;
@@ -238,82 +171,56 @@ button:hover {
     text-decoration: underline;
 }
 
-/* Optional: Mobile-friendly adjustments */
+/* Mobile-Friendly Adjustments */
 @media (max-width: 768px) {
     .navbar ul {
         flex-direction: column;
         align-items: center;
     }
+
+    .navbar-links {
+        display: none; /* Hidden by default on mobile */
+        flex-direction: column;
+        width: 100%;
+        background-color: black;
+    }
+
+    .navbar-toggle {
+        display: flex; /* Show hamburger icon on mobile */
+    }
+
+    .navbar-links.active {
+        display: flex; /* Show links when toggled */
+    }
+
+    .navbar a {
+        font-size: 18px; /* Larger text for readability */
+        padding: 15px 20px; /* Bigger tap area for touch devices */
+    }
 }
 
 /* Custom Scrollbar Styles */
-
-/* Scrollbar Container */
-::-webkit-scrollbar {
-    width: 8px;
-    /* Thin scrollbar */
-    height: 8px;
-    /* Thin horizontal scrollbar */
-}
-
-/* Scrollbar Track (background) */
-::-webkit-scrollbar-track {
-    background: black;
-    /* Matches background */
-    border-radius: 10px;
-    /* Rounded corners for smoothness */
-}
-
-/* Scrollbar Thumb (the draggable part) */
-::-webkit-scrollbar-thumb {
-    background-color: #555;
-    /* A subtle grey color */
-    border-radius: 10px;
-    /* Rounded corners for smoothness */
-    border: 2px solid #222;
-    /* A slight border to make it more defined */
-}
-
-/* Scrollbar Thumb on Hover */
-::-webkit-scrollbar-thumb:hover {
-    background-color: #888;
-    /* Lighter grey on hover */
-    border: 2px solid #444;
-    /* Slightly darker border for contrast */
-}
-
-/* Scrollbar Corner (bottom-right corner when both vertical and horizontal scrollbars are visible) */
-::-webkit-scrollbar-corner {
-    background-color: black;
-    /* Keeps the corner matching the background */
-}/* Custom Scrollbar Styles */
-
-/* Scrollbar Container */
 ::-webkit-scrollbar {
     width: 8px; /* Thin scrollbar */
     height: 8px; /* Thin horizontal scrollbar */
 }
 
-/* Scrollbar Track (background) */
 ::-webkit-scrollbar-track {
     background: black; /* Matches background */
-    border-radius: 10px; /* Rounded corners for smoothness */
+    border-radius: 10px; /* Rounded corners */
 }
 
-/* Scrollbar Thumb (the draggable part) */
 ::-webkit-scrollbar-thumb {
-    background-color: #555; /* A subtle grey color */
-    border-radius: 10px; /* Rounded corners for smoothness */
-    border: 2px solid #222; /* A slight border to make it more defined */
+    background-color: #555; /* Subtle gray */
+    border-radius: 10px; /* Rounded corners */
+    border: 2px solid #222; /* Slight border for definition */
 }
 
-/* Scrollbar Thumb on Hover */
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #888; /* Lighter grey on hover */
-    border: 2px solid #444; /* Slightly darker border for contrast */
+    background-color: #888; /* Lighter gray on hover */
+    border: 2px solid #444; /* Darker border for contrast */
 }
 
-/* Scrollbar Corner (bottom-right corner when both vertical and horizontal scrollbars are visible) */
 ::-webkit-scrollbar-corner {
-    background-color: black; /* Keeps the corner matching the background */
+    background-color: black; /* Matches background */
 }

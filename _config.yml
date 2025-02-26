@@ -1,7 +1,7 @@
 # TrshLab - Config
 # Edit sparingly. Server restart required.
 
-title: TrshLab
+title: LATHYUSLAB
 description: "Tech. Bio. Beyond. Welcome to the next 100 years."
 url: "https://trshdesigns.github.io"
 baseurl: ""
@@ -12,7 +12,7 @@ markdown: kramdown
 permalink: /:categories/:year/:month/:day/:title
 
 author:
-  name: Trsh
+  name: naica
   bio: "Edge data. Future fragments. Tech-bio stream."
 
 collections:
