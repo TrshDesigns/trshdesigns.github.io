@@ -5,7 +5,7 @@ title: LATHYUSLAB
 description: "Tech. Bio. Beyond. Welcome to the next 100 years."
 url: "https://trshdesigns.github.io"
 baseurl: ""
-email: "trshdesings@outlook.com"
+email: "trshdesigns@outlook.com"
 
 theme: minima
 markdown: kramdown
@@ -19,36 +19,39 @@ collections:
   investigations:
     output: true
     permalink: /x/:title
+  projects:
+    output: true
+    permalink: /projects/:title
 
 defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: post
-      categories: blog
-  - scope:
-      path: ""
-      type: investigations
-    values:
-      layout: post
-      categories: x
+- scope:
+    path: ""
+    type: posts
+  values:
+    layout: post
+    categories: blog
+- scope:
+    path: ""
+    type: investigations
+  values:
+    layout: post
+    categories: x
 
 plugins:
-  - jekyll-feed
+- jekyll-feed
 
 sass:
   sass_dir: _sass
 include:
-  - assets/css/style.css
+- assets/css/style.css
 
 # Custom navigation links
 navigation:
-  - title: Home
-    url: /
-  - title: About
-    url: /about/
-  - title: Projects
-    url: /projects/
-  - title: Investigations
-    url: /x/
+- title: Home
+  url: /
+- title: About
+  url: /about/
+- title: Projects
+  url: /projects/
+- title: Investigations
+  url: /investigations/

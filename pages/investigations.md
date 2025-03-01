@@ -1,6 +1,11 @@
 ---
 layout: page
 title: Investigations
-permalink: /x/
+permalink: /investigations/
 ---
-Here you will find our investigations.
+
+<ul>
+  {% for investigation in site.investigations %}
+    <li><a href="{{ investigation.url }}">{{ investigation.title }}</a></li>
+  {% endfor %}
+</ul>

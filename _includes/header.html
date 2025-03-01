@@ -1,11 +1,6 @@
 <header class="site-header">
     <nav class="navbar">
-        <button class="navbar-toggle" id="navbar-toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-        <ul class="navbar-links" id="navbar-links">
+        <ul class="navbar-links">
             {% for link in site.navigation %}
                 <li><a href="{{ link.url }}">{{ link.title }}</a></li>
             {% endfor %}

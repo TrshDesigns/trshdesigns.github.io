@@ -9,7 +9,7 @@ body {
     max-width: 80vw;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 97vh;
     overflow-x: hidden;
 }
 
@@ -74,6 +74,11 @@ thead {
     background: black;
 }
 
+.post-content{
+    max-height: 50vh;
+    overflow-y: scroll;
+}
+
 .site-footer {
     border-top: 2px solid #777;
     padding: 10px;
@@ -89,7 +94,6 @@ thead {
 .wrapper {
     max-width: 800px;
     margin: auto;
-    padding: 10px;
 }
 
 ul, ol {
@@ -136,67 +140,29 @@ button:hover {
     animation: blink 1s infinite;
 }
 
-/* Navbar Styling */
+/* Navbar styles */
 .navbar {
+    width: 70vw;
     display: flex;
     justify-content: center;
-    background-color: black;
-    padding: 10px 0;
+    align-items: center;
 }
 
-.navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+.navbar-links {
+    display: flex; /* Flexbox for horizontal layout */
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
 }
 
-.navbar li {
-    font-family: "Courier New", monospace;
-    letter-spacing: 0.1em;
+.navbar-links li {
+    margin: 0 15px; /* Space between links */
 }
 
-.navbar a {
-    color: #AAAAAA;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    padding: 5px 10px;
-    border: 1px solid transparent;
-}
-
-.navbar a:hover {
-    color: white;
-    background-color: #555;
-    border: 1px solid #777;
-    text-decoration: underline;
-}
-
-/* Mobile-Friendly Adjustments */
-@media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar-links {
-        display: none; /* Hidden by default on mobile */
-        flex-direction: column;
-        width: 100%;
-        background-color: black;
-    }
-
-    .navbar-toggle {
-        display: flex; /* Show hamburger icon on mobile */
-    }
-
-    .navbar-links.active {
-        display: flex; /* Show links when toggled */
-    }
-
-    .navbar a {
-        font-size: 18px; /* Larger text for readability */
-        padding: 15px 20px; /* Bigger tap area for touch devices */
-    }
+.navbar-links a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Default font size */
 }
 
 /* Custom Scrollbar Styles */
@@ -223,4 +189,11 @@ button:hover {
 
 ::-webkit-scrollbar-corner {
     background-color: black; /* Matches background */
+}
+
+.project-description,
+.project-content {
+    font-size: 14px; /* Adjust font size */
+    color: #666; /* Text color */
+    margin: 5px 0; /* Margin for spacing */
 }
